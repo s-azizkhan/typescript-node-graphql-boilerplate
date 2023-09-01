@@ -1,0 +1,72 @@
+{
+  "name": "typescript-node-graphql-boilerplate",
+  "version": "1.0.0",
+  "description": "Typescript NodeJS GraphQL Boilerplate",
+  "scripts": {
+    "prestart": "npm run gen",
+    "prewatch": "npm run gen",
+    "start": "tsx app .env",
+    "watch": "tsx watch app .env",
+    "gen": "graphql-codegen --config codegen.ts",
+    "lint": "eslint app/**/*.ts",
+    "format": "eslint app/**/*.ts --fix"
+  },
+  "keywords": [
+    "typescript", "graphql", "boilerplate", "nodejs", "postgres", "express", "apollo-graphql"
+  ],
+  "author": {
+    "name": "S.Aziz Khan",
+    "email": "sakatazizkhan1@gmail.com",
+    "url": "https://github.com/s-azizkhan"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "4.9.1",
+    "@graphql-tools/load-files": "7.0.0",
+    "@graphql-tools/merge": "9.0.0",
+    "@graphql-tools/schema": "10.0.0",
+    "@graphql-tools/utils": "10.0.5",
+    "@sinclair/typebox": "0.30.4",
+    "@types/body-parser": "1.19.2",
+    "@types/cors": "2.8.13",
+    "@types/express": "4.17.17",
+    "@types/lodash": "4.14.197",
+    "@types/pg": "8.10.2",
+    "@types/sequelize": "4.28.15",
+    "ajv": "8.12.0",
+    "bcrypt": "5.1.0",
+    "body-parser": "1.20.2",
+    "class-validator": "0.14.0",
+    "cors": "2.8.5",
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "express-basic-auth": "1.2.1",
+    "graphql": "16.7.1",
+    "jsonwebtoken": "9.0.1",
+    "lodash": "4.17.21",
+    "pg": "8.11.1",
+    "pg-hstore": "2.3.4",
+    "postgres": "3.3.5",
+    "reflect-metadata": "0.1.13",
+    "sequelize": "6.32.1",
+    "sequelize-cli": "6.6.1",
+    "sequelize-typescript": "2.1.5",
+    "type-graphql": "1.1.1",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.0",
+    "@graphql-codegen/introspection": "4.0.0",
+    "@graphql-codegen/typescript": "4.0.1",
+    "@graphql-codegen/typescript-resolvers": "4.0.1",
+    "@types/bcrypt": "5.0.0",
+    "@types/express": "4.17.17",
+    "@types/jsonwebtoken": "9.0.2",
+    "@types/node": "20.4.9",
+    "@typescript-eslint/eslint-plugin": "6.5.0",
+    "@typescript-eslint/parser": "6.5.0",
+    "eslint": "8.48.0",
+    "prettier": "^3.0.3",
+    "tsx": "3.12.7"
+  }
+}

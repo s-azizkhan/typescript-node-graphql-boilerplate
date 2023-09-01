@@ -1,0 +1,9 @@
+scalar JSON
+scalar Date
+scalar DateTime
+directive @isAuthenticated on FIELD_DEFINITION
+
+type CommonResponse {
+  message: String
+  status: String
+}

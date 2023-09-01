@@ -1,0 +1,44 @@
+scalar DATETIME
+
+directive @deprecated(
+  reason: String = "No longer supported"
+) on FIELD_DEFINITION | ENUM_VALUE
+
+type NotFound {
+  message: String
+}
+
+type Query {
+  getUserDetail: UserData @isAuthenticated
+}
+
+type Mutation {
+  userSignUp(data: UserSignUpInput!): AuthSuccess
+  userSignIn(data: UserSignInInput!): AuthSuccess
+}
+
+input UserSignInInput {
+  email: String!
+  password: String!
+}
+
+input UserSignUpInput {
+  name: String!
+  email: String!
+  password: String!
+}
+
+type AuthSuccess {
+  accessToken: String!
+  message: String
+}
+
+type UserData {
+  id: String!
+  name: String!
+  email: String!
+  password: String
+  createdAt: DATETIME!
+  updatedAt: DATETIME
+  deletedAt: DATETIME
+}
